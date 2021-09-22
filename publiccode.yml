@@ -1,0 +1,89 @@
+# This repository adheres to the publiccode.yml standard by including this
+# metadata file that makes public software easily discoverable.
+# More info at https://github.com/italia/publiccode.yml
+
+publiccodeYmlVersion: '0.2'
+categories:
+  - document-management
+dependsOn:
+  open:
+    - name: Python
+      optional: false
+      version: ''
+      versionMax: ''
+      versionMin: ''
+description:
+  it:
+    genericName: web application
+    documentation: 'https://github.com/UniversitaDellaCalabria/pyWSTitulus'
+    features:
+      - >-
+        Protocollazioni e recupero Documenti da Titulus con Python
+    longDescription: >-
+      Protocollazione e recupero documenti da Titulus con Python tramite interfaccia ws SOAP.
+      
+      
+      Qui di seguito è presentato un esempio di recupero di un protocollo:
+      ~~~~ 
+      from titulus_ws.protocollo import Protocollo wsclient = Protocollo(wsdl_url=PROT_URL, username=PROT_LOGIN, password=PROT_PASSW, aoo=PROTOCOLLO_AOO, anno=2018, numero=234234)
+      # Recupera
+      wsclient.get()
+      
+      # Salva i file in locale
+      wsclient.dumpfiles()
+      
+      # Renderizza il documento che descrive il flusso di protocollazione (dataXML).
+      wsclient.render_dataXML()
+      ~~~~ 
+      
+      The entire project code is open sourced and therefore
+      licensed under the Apache 2.0.
+    shortDescription: >-
+      Protocollazione e recupero documenti da Titulus con Python tramite interfaccia ws SOAP.
+developmentStatus: beta
+intendedAudience:
+  scope:
+    - employment
+it:
+  conforme:
+    gdpr: true
+    lineeGuidaDesign: true
+    misureMinimeSicurezza: true
+    modelloInteroperabilita: false
+  countryExtensionVersion: '0.2'
+  piattaforme:
+    anpr: false
+    cie: false
+    pagopa: false
+    spid: false
+  riuso:
+    codiceIPA: unical
+landingURL: 'https://github.com/UniversitaDellaCalabria/pyWSTitulus'
+legal:
+  authorsFile: >-
+    https://github.com/UniversitaDellaCalabria/pyWSTitulus/blob/main/AUTHORS
+  license: Apache-2.0
+  mainCopyrightOwner: Università della Calabria
+localisation:
+  availableLanguages:
+    - it
+  localisationReady: true
+maintenance:
+  contacts:
+    - name: Carmelo Polimeni
+      email: carmelo.polimeni@unical.it
+      affiliation: unical.it
+    - name: Francesco Filicetti
+      email: francesco.filicetti@unical.it
+      affiliation: unical.it
+  type: internal
+name: pyWSTitulus
+platforms:
+  - linux
+releaseDate: '2021-10-15'
+roadmap: 'https://github.com/UniversitaDellaCalabria/pyWSTitulus/issues'
+softwareType: standalone/web
+softwareVersion: v0.4.0
+url: 'https://github.com/UniversitaDellaCalabria/pyWSTitulus'
+usedBy:
+  - Università della Calabria - https://www.unical.it
