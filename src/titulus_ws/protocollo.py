@@ -102,13 +102,10 @@ class WSTitulusClient(object):
 
     def fascicolaDocumento(self, fascicolo):
         self.assure_connection()
-        try:
-            response = self.service.addInFolder(fascicolo)
-            if response:
-                return True
-                # root = ET.fromstring(response._value_1)
-        except Exception as error:
-            print(f"Errore durante la fascicolazione: {error}")
+        response = self.service.addInFolder(fascicolo)
+        if response:
+            return True
+            # root = ET.fromstring(response._value_1)
 
     def cercaDocumento(self, key, value):
         self.assure_connection()
