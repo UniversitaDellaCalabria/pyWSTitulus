@@ -97,3 +97,7 @@ print(f'Ricerca protocollo: {num_prot}')
 response = titulus.cercaDocumento("docnumprot", num_prot)
 print(response.__dict__['__values__']['_value_1'])
 ````
+
+## Crediti
+
+- Enrico Ardizzoni (uniFE) for a responbile security disclosure;
