@@ -1,5 +1,5 @@
 # pyWSTitulus
-Protocollazioni e recupero Documenti da Titulus 5 con Python 3.
+Protocollazioni e recupero Documenti da Titulus 4 con Python 3.
 
 ## Installazione
 ````
